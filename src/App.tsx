@@ -12,17 +12,21 @@ import TopBar from "./pages/layout/Topbar";
 const Layout = () => (
   <>
     <TopBar />
-    <Outlet />
+    <div className="pt-16 ">
+      <Outlet />
+    </div>
   </>
 );
 
 function App() {
   const router = createBrowserRouter(
     createRoutesFromElements(
-      <Route path="/" element={<Layout />}>
-        <Route index element={<LandingPageTemp />} />
-        <Route path="*" element={<PageNotFound />} />
-      </Route>
+      <>
+        <Route path="/" element={<Layout />}>
+          <Route index element={<LandingPageTemp />} />
+          <Route path="*" element={<PageNotFound />} />
+        </Route>
+      </>
     )
   );
 
