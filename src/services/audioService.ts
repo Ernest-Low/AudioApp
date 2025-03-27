@@ -3,7 +3,7 @@ import { AudioData } from "../interfaces/audioInterface";
 
 const AUDIO_PATH = "/api/audio";
 const token =
-  "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI3Mzc2ZTNhMy1iNzdiLTRhOTEtYWYzMC0yNjA2N2FiOGM5OTMiLCJpYXQiOjE3Mzk0NTIzNzgsImV4cCI6MTczOTQ1NTk3OH0.kuTbRAPlLQNLVtMQ3fS_kzfmpPZZFZG2LvpO6yCsVBU";
+  "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiIyZDMyOWYyMy00Y2MzLTRlMzAtYjVjOC0xYmFmOTljZDAxZTkiLCJpYXQiOjE3NDMwMTE1NjgsImV4cCI6MTc0MzAxNTE2OH0.49x7U8bF_eh7AYbq6ENwVVUmUmN9-ScQi923eYwpLAo";
 
 export const getAudioData = async (audioId: string): Promise<AudioData> => {
   try {

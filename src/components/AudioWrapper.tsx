@@ -7,7 +7,7 @@ interface AudioPlayerProps {
   audioId: string;
 }
 
-const AudioPlayer: React.FC<AudioPlayerProps> = ({ audioId }) => {
+const AudioWrapper: React.FC<AudioPlayerProps> = ({ audioId }) => {
   const [audioUrl, setAudioUrl] = useState<string | null>(null);
   const [isLoading, setIsLoading] = useState<boolean>(true);
   const [error, setError] = useState<string | null>(null);
@@ -50,4 +50,4 @@ const AudioPlayer: React.FC<AudioPlayerProps> = ({ audioId }) => {
   );
 };
 
-export default AudioPlayer;
+export default AudioWrapper;

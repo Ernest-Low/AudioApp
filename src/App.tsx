@@ -1,14 +1,32 @@
-import AudioPlayer from "./components/AudioPlayer";
+import {
+  createBrowserRouter,
+  createRoutesFromElements,
+  Outlet,
+  Route,
+  RouterProvider,
+} from "react-router";
+import PageNotFound from "./pages/PageNotFound";
+import LandingPageTemp from "./pages/LandingPageTemp";
+import TopBar from "./pages/layout/Topbar";
+
+const Layout = () => (
+  <>
+    <TopBar />
+    <Outlet />
+  </>
+);
 
 function App() {
-  const audioId = "0b7f28ff-e9f6-4d80-a194-e5c28572615c";
-
-  return (
-    <>
-      <p>Hello World</p>
-      <AudioPlayer audioId={audioId} />
-    </>
+  const router = createBrowserRouter(
+    createRoutesFromElements(
+      <Route path="/" element={<Layout />}>
+        <Route index element={<LandingPageTemp />} />
+        <Route path="*" element={<PageNotFound />} />
+      </Route>
+    )
   );
+
+  return <RouterProvider router={router} />;
 }
 
 export default App;

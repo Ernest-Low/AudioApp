@@ -20,14 +20,11 @@ const AudioCard: React.FC<AudioCardProps> = ({ audioData }) => {
         ))}
       </div>
 
-      {/* Title and Length */}
       <div className="mt-3 flex items-center justify-between">
         <h2 className="text-xl font-bold text-gray-800">{audioName}</h2>
         <span className="text-sm font-medium text-gray-500">{length}</span>
       </div>
-
-      {/* Description */}
-      <p className="mt-2 text-sm text-gray-600 line-clamp-3">{description}</p>
+      <p className="mt-2 text-sm text-gray-600">{description}</p>
     </div>
   );
 };
